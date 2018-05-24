@@ -41,7 +41,7 @@ class UsersController < ApplicationController
          #remove some unnecessary words and characters(Example:#abc(ew)=>#abc)
         for i in 0..@post_dom.length-1
             #remove all special characters and all single character "#"
-            @post_dom[i]=@post_dom[i].gsub(/[!@$%^&*()+-.,:;<>?|'"{}\\\/\[\]]/,' ')
+            @post_dom[i]=@post_dom[i].gsub(/[!@$%^&*()+-.~`,:;<>?|'"{}\\\/\[\]]/,' ')
             @post_dom[i]=@post_dom[i].gsub(/(#[' '])/,' ')
             #remove \n
             @post_dom[i]=@post_dom[i].gsub("\n",'')
